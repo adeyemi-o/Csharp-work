@@ -19,32 +19,44 @@ namespace JoshuaH_301186067_A2
         public string Name { get; set; }
         // Players { get; set; } : List<Player>
         public List<Player> Players { 
-            get { return this.players; } 
+            get { return players; } 
             private set { players = value; } 
         }
         // Region { get; set; } : Region
         public Region Region { get; set; }
 
-        // Methods:
-        // AddPlayer(Player aPlayer) : void
-        // FindPlayer(uint id) : Player
-        // GetPlayers(string name) : IEnumerable<Player>
+        // Constructors
         // Team()
         public Team()
         {
             // initialize the list and set the team Id
-            this.players = new List<Player>();
+            players = new List<Player>();
             Id = IdGenerator.GetId();
         }
         // Team(string name)
         public Team(string name)
         {
-
+            players = new List<Player>();
+            Id = IdGenerator.GetId();
+            Name = name;
         }
         // Team(string name, Region region)
         public Team(string name, Region region)
         {
+            players = new List<Player>();
+            Id = IdGenerator.GetId();
+            Name = name;
+            Region = region;
+        }
 
+        // Methods:
+        // AddPlayer(Player aPlayer) : void
+
+        // FindPlayer(uint id) : Player
+        // GetPlayers(string name) : IEnumerable<Player>
+        public IEnumerable<Player> GetPlayers(string name)
+        {
+            yield return null;
         }
         // ToString() : string
         public override string ToString()
