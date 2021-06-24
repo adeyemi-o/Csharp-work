@@ -10,7 +10,7 @@ namespace JoshuaH_301186067_A2
     {
         // Fields:
         // matches : List<Match>
-        private readonly List<Match> matches;
+        protected readonly List<Match> matches;
 
         // Properties:
         // Matches { get; } : List<Match>
@@ -35,7 +35,7 @@ namespace JoshuaH_301186067_A2
             Teams.Add(team);
         }
         // AddWinner(Team winner, Team loser) : void
-        public void AddWinner(Team winner, Team loser)
+        public virtual void AddWinner(Team winner, Team loser)
         {
             Match match = FindMatch(winner, loser);
             if (match != null)

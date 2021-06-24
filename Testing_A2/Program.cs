@@ -78,7 +78,7 @@ namespace Testing_A2
             Console.WriteLine(rrTournament1);
             Console.WriteLine();
 
-            Match foundMatch = rrTournament1.FindMach(TeamRepository.Teams[1],
+            Match foundMatch = rrTournament1.FindMatch(TeamRepository.Teams[1],
                                                       TeamRepository.Teams[0]);
             if (foundMatch != null)
             {

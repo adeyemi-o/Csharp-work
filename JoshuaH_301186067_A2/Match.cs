@@ -18,7 +18,15 @@ namespace JoshuaH_301186067_A2
 
         // Properties:
         // Finished { get; } : bool
-        public bool Finished { get { return finished; } }
+        public bool Finished 
+        { 
+            get
+            {
+                if (winningTeam != null) { finished = true; }
+                else { finished = false; }
+                return finished;
+            } 
+        }
         // MatchNumber { get; set; } : int
         public int MatchNumber { get; set; }
         // Teams { get; } : Team[]
@@ -34,7 +42,6 @@ namespace JoshuaH_301186067_A2
             teams = new Team[2];
             teams[0] = team1;
             teams[1] = team2;
-            finished = false;
             winningTeam = null;
         }
 
