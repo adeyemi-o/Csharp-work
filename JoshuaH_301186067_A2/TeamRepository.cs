@@ -10,7 +10,9 @@ namespace JoshuaH_301186067_A2
     {
         // Fields:
         // path : string
+        private const string PATH = "..\\data\\teams.json";
         // teams : List<Team>
+        private List<Team> teams;
 
         // Properties:
         // Teams { get; } : List<Team>

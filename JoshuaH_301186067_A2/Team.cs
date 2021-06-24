@@ -51,12 +51,40 @@ namespace JoshuaH_301186067_A2
 
         // Methods:
         // AddPlayer(Player aPlayer) : void
-
+        /* The method adds a player that is provided as the argument of the 
+            method to the team. Every time when a new player is added to a team the team 
+            repository is saved. The team repository is represented by the TeamRepository class 
+            described below.*/
+        public void AddPlayer(Player aPlayer)
+        {
+            players.Add(aPlayer);
+            // Also save the team repository
+        }
         // FindPlayer(uint id) : Player
+        // Return a reference to the player with the provided id, or null if not found.
+        public Player FindPlayer(uint id)
+        {
+            foreach (Player pl in players)
+            {
+                if (pl.Id == id)
+                {
+                    return pl;
+                }
+            }
+            // No player was found with that Id, return null
+            return null;
+        }
         // GetPlayers(string name) : IEnumerable<Player>
+        // Return all the players with the provided name
         public IEnumerable<Player> GetPlayers(string name)
         {
-            yield return null;
+            foreach (Player pl in players)
+            {
+                if (pl.Name == name)
+                {
+                    yield return pl;
+                }
+            }
         }
         // ToString() : string
         public override string ToString()
