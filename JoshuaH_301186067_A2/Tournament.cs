@@ -37,14 +37,14 @@ namespace JoshuaH_301186067_A2
         // AddWinner(Team winner, Team loser) : void
         public virtual void AddWinner(Team winner, Team loser)
         {
-            Match match = FindMatch(winner, loser);
+            Match match = FindMach(winner, loser);
             if (match != null)
             {
                 match.WinningTeam = winner;
             }
         }
         // FindMatch(Team team1, Team team2) : Match
-        public Match FindMatch(Team team1, Team team2)
+        public Match FindMach(Team team1, Team team2)
         {
             foreach (Match match in matches)
             {
